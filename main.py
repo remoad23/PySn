@@ -1,16 +1,40 @@
-# This is a sample Python script.
+from PyQt6.QtCore import Qt
+from PyQt6.QtGui import QPainter, QPen, QColor
+from PyQt6.QtWidgets import QApplication, QWidget, QGraphicsScene, QGraphicsView, QGraphicsRectItem
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+# Only needed for access to command line arguments
+import sys
 
+from PyQt6.uic.properties import QtGui
+from PyQt6.uic.uiparser import QtWidgets
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+# You need one (and only one) QApplication instance per application.
+# Pass in sys.argv to allow command line arguments for your app.
+# If you know you won't use command line arguments QApplication([]) works too.
+app = QApplication(sys.argv)
 
+# Create a QGraphicsView
+view = QGraphicsView()
+view.setFixedSize(1920, 1080)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('swag')
+# Create a QGraphicsScene
+scene = QGraphicsScene()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# Create a QGraphicsRectItem (a square)
+square = QGraphicsRectItem(0, 0, 100, 100)  # (x, y, width, height)
+
+# Set the square's color (red)
+square.setBrush(QColor(255, 0, 0))
+
+# Add the square to the scene
+scene.addItem(square)
+
+# Set the scene for the view
+view.setScene(scene)
+
+# Show the view
+view.show()
+
+# Start the event loop.
+app.exec()
+
