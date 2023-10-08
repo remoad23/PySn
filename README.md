@@ -1,24 +1,24 @@
 # PySn
-Beginner Project Python
+Beginner Project Python <br>
 
 
-Erforderlich:
-  Allgemeine Funktionen: \n
---> klassisches Snake Programm \n
---> Spielstände speichern \n
---> GUI basierte Anzeige
+Erforderlich: <br>
+  Allgemeine Funktionen:  <br>
+--> klassisches Snake Programm  <br>
+--> Spielstände speichern <br>
+--> GUI basierte Anzeige <br>
 
-  GUI:
---> Lebensanzeige (3 Leben)
---> Blockbasiertes Spielfeld
---> Blockbasierte Schlange
---> steuerbare durch Pfeiltasten
---> Farbliche Veränderung des Spielfeld / Schlange 
-  -->GUI Menüs:
-    --> Highscore
-    --> Startscreen
-    --> Spielfeld
+  GUI: <br>
+--> Lebensanzeige (3 Leben) <br>
+--> Blockbasiertes Spielfeld <br>
+--> Blockbasierte Schlange <br>
+--> steuerbare durch Pfeiltasten <br>
+--> Farbliche Veränderung des Spielfeld / Schlange <br>
+  -->GUI Menüs: <br>
+    --> Highscore <br>
+    --> Startscreen <br>
+    --> Spielfeld <br>
 
-Optional:
---> Networking (TCP/IP?) 2 Spieler Modi
+Optional: <br>
+--> Networking (TCP/IP?) 2 Spieler Modi <br>
 --> Datenbank (Spieler,Highscore)
