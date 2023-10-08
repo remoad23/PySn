@@ -3,9 +3,9 @@ Beginner Project Python
 
 
 Erforderlich:
-  Allgemeine Funktionen:
---> klassisches Snake Programm
---> Spielstände speichern
+  Allgemeine Funktionen: \n
+--> klassisches Snake Programm \n
+--> Spielstände speichern \n
 --> GUI basierte Anzeige
 
   GUI:
