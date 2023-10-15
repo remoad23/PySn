@@ -20,21 +20,21 @@ view.setFixedSize(1920, 1080)
 # Create a QGraphicsScene
 scene = QGraphicsScene()
 
-# Create a QGraphicsRectItem (a square)
-square = QGraphicsRectItem(0, 0, 100, 100)  # (x, y, width, height)
-
-# Set the square's color (red)
-square.setBrush(QColor(255, 0, 0))
-
-# Add the square to the scene
-scene.addItem(square)
+# Create 10x10 QGraphicsRectItems (10x10 squares)
+for i in range(10):
+    for j in range(10):
+        square = QGraphicsRectItem(i * 30, j * 30, 30, 30)  # (x, y, width, height) # Create a QGraphicsRectItem (a square)
+        square.setBrush(QColor(255, 0, 0)) # Set the square's color (red)
+        scene.addItem(square) # Add the square to the scene
 
 # Set the scene for the view
 view.setScene(scene)
-
 # Show the view
 view.show()
 
 # Start the event loop.
 app.exec()
+
+
+
 
