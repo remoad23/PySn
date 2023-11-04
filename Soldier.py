@@ -21,8 +21,8 @@ class Soldier(Player):
 
 
 
-    def __init__(self):
-        pass
+    # def __init__(self):
+    #     pass
 
 
 # s1 = Soldier()
