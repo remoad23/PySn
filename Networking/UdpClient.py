@@ -9,6 +9,12 @@
 #     def sendtoserver():
 #         pass
 #
-#     def receivefromserver():
-#         pass
+#     def listen(self):
+#         super().listen(self.receivefromserver)
+#
+#     def receivefromserver(self):
+#         if super()._RequestFinished:
+#             self._RequestFinished = False
+#             #hier die aktionen ausführen wenn daten angekommen ist als gesamte anfrage
+#
 #

@@ -12,6 +12,9 @@
 #     __Thread = None
 #     __ClosedRequested = False
 #
+#     _CurrentRequest = None
+#     _RequestFinished = False
+#
 #
 #     def __init__(self, hostip, port, childconnection):
 #         self.HostIp = hostip
@@ -22,11 +25,14 @@
 #     def __del__(self):
 #         self.__closeconnection(self)
 #
+#     def send(self,data):
+#         self.__Socket.send(data)
 #
-#     def listen(self, loopmethod):
+#     def _listen(self, loopmethod):
 #         while not self.__ClosedRequested:
 #             loopmethod()
 #
+#         self.__closeconnection()
 #
 #     def _buildconnection(self):
 #         if self.__Child is UdpClient:
@@ -38,16 +44,14 @@
 #         else:
 #             raise Exception("No Servertype set.Set the servertype in constructor")
 #
-#
 #     def __closeconnection(self):
 #         self.__Socket.close()
-#
+#         self.__Thread.join()
 #
 #     # ------------------ Server specific Methods -------------------------------------
 #     def __buildconnectionforserver(self, methodtopasstothread):
 #         self.__Socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 #         self.__Socket.connect((self.__HostIP, self.__Port))
-#
 #
 #     # ------------------ Client specific Methods -------------------------------------
 #     def __buildconnectionforclient(self):
