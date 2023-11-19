@@ -23,6 +23,8 @@ timer = QTimer()
 # die schlange
 snake = Snake()
 
+
+
 # hier wird die schlange grafisch bewegt
 def update_snake():
     # letzter block des letzten koerpreteil kriegt die farbe des spielfeldes
@@ -35,7 +37,7 @@ def update_snake():
     square_of_last_bodypart.setBrush(QColor(255, 0, 0))
 
     # hier werden die werte der schlange veraendert
-    snake.move_snake("down")
+    snake.move_snake("up")
 
     # erste koerperteil wurde ab hier bewegt und neue position erhaelt rote farbe
     first_bodypart = snake.bodyParts[0]

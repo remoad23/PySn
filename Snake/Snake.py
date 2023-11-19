@@ -51,6 +51,7 @@ class Snake:
         if direction == "right":
             xforward = 1
 
+
         length_of_bodypart = len(self.bodyParts)
 
         # schlange von letzten koerperteil durch gehen bis zum zweiten teil
