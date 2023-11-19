@@ -19,6 +19,7 @@ squarematrix = []
 
 timer = QTimer()
 
+
 # die schlange
 snake = Snake()
 
